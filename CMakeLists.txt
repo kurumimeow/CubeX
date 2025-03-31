@@ -8,9 +8,13 @@ endif()
 
 project ("CubeX")
 
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 # Add source to this project's executable.
-add_library (${PROJECT_NAME} SHARED "main.cpp")
+add_library (${PROJECT_NAME} SHARED "main.cpp" "player.hpp" "inventory.hpp")
 
 set_property(TARGET ${PROJECT_NAME} PROPERTY CXX_STANDARD 23)
 
 # TODO: Add tests and install targets if needed.
+# target_link_libraries(${PROJECT_NAME} PRIVATE imgui)
